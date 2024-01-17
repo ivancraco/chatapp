@@ -13,8 +13,8 @@
 
 <script>
   function downloadAPK() {
-  var url = "[https://github.com/](https://github.com/)[Tu nombre de usuario]/[Nombre del repositorio]/blob/main/[Nombre del APK]";
-  var filename = "mi-aplicacion.apk";
+  var url = "https://github.com/ivancraco/chatapp/blob/master/chat_app.apk";
+  var filename = "chat_app.apk";
 
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
