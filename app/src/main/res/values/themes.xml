@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Chat" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/primary_color_variant</item>
+    </style>
+
+    <style name="Theme.Chat.SplashScreen">
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="postSplashScreenTheme">@style/Theme.Chat</item>
+    </style>
+
+    <style name="styleableToast">
+        <item name="stTextBold">true</item>
+        <item name="stTextSize">13sp</item>
+        <item name="stTextColor">@color/text_grey</item>
+        <item name="stColorBackground">@color/grey</item>
+        <item name="stRadius">10dp</item>
+        <item name="stIconStart">@drawable/ic_error</item>
+    </style>
+</resources>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name" translatable="false">Chat</string>
+    <string name="title_activity_user" translatable="false">UserActivity</string>
+    <string name="title_activity_chat" translatable="false">ChatActivity</string>
+
+    <string name="greeting">¡Welcome back!</string>
+    <string name="log_in_to_continue_message">Log in to continue</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_out">Sign out</string>
+    <string name="message">Message</string>
+    <string name="verify_email_message">Verify your email to continue</string>
+    <string name="create_new_account_message">Create new account</string>
+    <string name="sign_in_error_message">The supplied auth credential is incorrect, malformed or has expired</string>
+    <string name="send_email_verification">Verification email has been sent</string>
+    <string name="send_email_verification_error">An error has occurred, try again</string>
+    <string name="firebase_auth_user_collision_exception">The email address is already in use by another account</string>
+    <string name="firebase_auth_weak_password_exception">Password should be at least 6 characters</string>
+    <string name="username_not_valid">The username must not exceed 20 characters</string>
+    <string name="email_not_valid">Invalid email</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="account_created_successfully">Account Created successfully</string>
+    <string name="image_content_description">Profile image</string>
+    <string name="send_message_description">Send Message</string>
+</resources>

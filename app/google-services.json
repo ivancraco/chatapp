@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "315173531478",
+    "project_id": "chat-c062c",
+    "storage_bucket": "chat-c062c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315173531478:android:b1d00ea0c69f1d387230f7",
+        "android_client_info": {
+          "package_name": "com.ivandev.chatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP8lBbWtTHYAQ2vJFkf7gOU2NVAku3mCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

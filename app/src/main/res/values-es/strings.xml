@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="greeting">¡Bienvenido de nuevo!</string>
+    <string name="log_in_to_continue_message">Inicia sesión para continuar</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="sign_in">Iniciar sesión</string>
+    <string name="sign_up">Registrarse</string>
+    <string name="sign_out">Cerrar sesión</string>
+    <string name="message">Mensaje</string>
+    <string name="verify_email_message">Verifica tu correo para continuar</string>
+    <string name="create_new_account_message">Crear nueva cuenta</string>
+    <string name="sign_in_error_message">La credencial de autenticación proporcionada es incorrecta, tiene un formato incorrecto o ha caducado</string>
+    <string name="send_email_verification">Verificación de correo enviada</string>
+    <string name="send_email_verification_error">Ha ocurrido un error, inténtelo nuevamente</string>
+    <string name="firebase_auth_user_collision_exception">La dirección de correo electrónico ya está en uso por otra cuenta</string>
+    <string name="firebase_auth_weak_password_exception">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="username_not_valid">El nombre de usuario no debe exceder los 20 caracteres</string>
+    <string name="email_not_valid">Email inválido</string>
+    <string name="passwords_do_not_match">Las contraseñas no coinciden</string>
+    <string name="account_created_successfully">Cuenta creada exitosamente</string>
+    <string name="image_content_description">Imagen de perfil</string>
+    <string name="send_message_description">Enviar mensaje</string>
+</resources>
