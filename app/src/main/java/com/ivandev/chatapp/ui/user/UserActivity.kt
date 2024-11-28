@@ -21,10 +21,12 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.EventListener
@@ -61,8 +63,9 @@ class UserActivity : ComponentActivity(), EventListener<QuerySnapshot> {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val currentuserUid = firebaseAuth.currentUser?.uid!!
-        viewModel.getUsers(currentuserUid, this)
+        firebaseAuth.currentUser?.let { firebaseUser ->
+            viewModel.getUsers(firebaseUser.uid, this)
+        }
         setContent {
             ChatTheme {
                 Surface(
@@ -94,7 +97,7 @@ class UserActivity : ComponentActivity(), EventListener<QuerySnapshot> {
                 .background(color = PrimaryColor)
                 .fillMaxSize()
         ) {
-            TopAppBar(modifier = Modifier.fillMaxWidth(), backgroundColor = PrimaryColor) {
+            TopAppBar(modifier = Modifier.fillMaxWidth(), backgroundColor = Color.Black) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -116,8 +119,9 @@ class UserActivity : ComponentActivity(), EventListener<QuerySnapshot> {
                         })
                 }
             }
-            Spacer(modifier = Modifier.height(30.dp))
-            LazyColumn {
+            LazyColumn(
+                modifier = Modifier.padding(top = 12.dp, bottom = 12.dp)
+            ) {
                 items(users) {
                     Row(
                         modifier = Modifier
@@ -152,41 +156,8 @@ class UserActivity : ComponentActivity(), EventListener<QuerySnapshot> {
 
     @Composable
     fun App() {
-        var loading by remember { mutableStateOf(true) }
-        var showProgressBar by remember { mutableStateOf(false) }
-
-        LaunchedEffect(loading) {
-            if (loading) {
-                launch {
-                    delay(800)
-                    showProgressBar = true
-                }
-            } else {
-                showProgressBar = false
-            }
-        }
-        if (showProgressBar) {
-            LoadingProgressBar()
-        }
-        if (currentUser != null && users.isNotEmpty()) {
-            loading = false
-            User(currentUser!!, users)
-        }
-    }
-
-    @Composable
-    fun LoadingProgressBar() {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(color = PrimaryColor),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            CircularProgressIndicator(
-                modifier = Modifier.size(24.dp),
-                color = Green,
-            )
+        currentUser?.let {
+            User(it, users)
         }
     }
 

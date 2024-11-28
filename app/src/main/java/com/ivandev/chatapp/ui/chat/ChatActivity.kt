@@ -54,8 +54,9 @@ class ChatActivity : ComponentActivity(), EventListener<QuerySnapshot> {
         val receiverId = intent.getStringExtra(ACTIVITY_RECEIVER_ID)!!
         val receiverName = intent.getStringExtra(ACTIVITY_RECEIVER_NAME)!!
         val receiverImage = intent.getStringExtra(ACTIVITY_RECEIVER_IMAGE)!!
-        val currentUserUid = firebaseAuth.currentUser?.uid!!
-        viewModel.listenMessages(currentUserUid, receiverId, this)
+        firebaseAuth.currentUser?.let { firebaseUser ->
+            viewModel.listenMessages(firebaseUser.uid, receiverId, this)
+        }
         setContent {
             ChatTheme {
                 Surface(
@@ -86,7 +87,7 @@ class ChatActivity : ComponentActivity(), EventListener<QuerySnapshot> {
                 .fillMaxSize()
                 .background(color = PrimaryColor)
         ) {
-            TopAppBar(modifier = Modifier.fillMaxWidth(), backgroundColor = PrimaryColor) {
+            TopAppBar(modifier = Modifier.fillMaxWidth(), backgroundColor = Color.Black) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
