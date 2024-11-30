@@ -4,6 +4,6 @@
 <h2>Operations that can be performed</h2>
 <p>&#9989 Create an account.</p>
 <p>&#9989 Chat with other users in real time.</p>
-<p>Download the app <a href="https://github.com/ivancraco/chatapp/releases" download="chat_app">here</a>.</p>
+<p>Try it on an <a href="https://appetize.io/embed/b_xajor3f7pkswpj4ttwukxmjy4a" target="_blank">emulator</a>.</p>
 <h2>Author</h2>
 <span>Iván Craco</span>
